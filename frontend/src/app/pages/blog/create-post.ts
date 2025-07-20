@@ -103,14 +103,7 @@ import { CreateBlogPostRequest } from '../../models/blog-post.model';
                         <div class="flex gap-3">
                             <p-button type="button" label="Generate with AI" icon="pi pi-magic" [outlined]="true" (onClick)="openAIDialog()" [disabled]="isGeneratingAI">
                                 <i class="pi pi-spin pi-spinner" *ngIf="isGeneratingAI"></i>
-                                {{ isGeneratingAI ? 'Generating...' : 'Generate with AI' }}
                             </p-button>
-
-                            <p-button type="button" label="Preview" icon="pi pi-eye" [outlined]="true" (onClick)="togglePreview()" [disabled]="!postForm.get('title')?.value && !postForm.get('body')?.value">
-                                {{ showPreview ? 'Hide Preview' : 'Show Preview' }}
-                            </p-button>
-
-                            <p-button type="button" label="Save Draft" icon="pi pi-save" [outlined]="true" severity="secondary" (onClick)="saveDraft()" [disabled]="postForm.invalid || isSubmitting"> </p-button>
                         </div>
 
                         <div class="flex gap-3">
